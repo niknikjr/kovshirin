@@ -4,10 +4,11 @@ public class Id {
     private int id;
     private static int nextId;
 
-
-
-    public Id(int id) {
+    static  {
         nextId = ((int) (Math.random()*100));
+    }
+
+    public Id() {
         this.id = nextId;
         nextId++;
     }
